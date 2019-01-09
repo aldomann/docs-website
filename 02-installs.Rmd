@@ -1,0 +1,25 @@
+# (PART) Installation guides {-}
+
+# Install Adobe Digital Editions (Wine)
+
+```{bash eval=FALSE}
+echo "Hello world!"
+```
+
+# Install Age of Empires II: HD on Steam
+
+```{bash eval=FALSE}
+echo "Hello world!"
+```
+
+# Install Civilization IV on Steam
+
+```{bash eval=FALSE}
+echo "Hello world!"
+```
+
+# Install SketchUp 2018 (Wine)
+
+```{bash eval=FALSE}
+echo "Hello world!"
+```
