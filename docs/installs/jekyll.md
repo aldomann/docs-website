@@ -1,10 +1,11 @@
 ---
 layout: default
-title: Installation guides
-nav_order: 3
+title: Jekyll
+parent: Installation guides
+nav_order: 1
 ---
 
-# Installation guides
+# Jekyll
 {: .no_toc }
 
 ## Table of contents
@@ -15,15 +16,13 @@ nav_order: 3
 
 ---
 
-## Jekyll
-
-### What is Jekyll
+## What is Jekyll
 
 Jekyll is a framework that takes different, easy to read/format, small files and builds a static website for you. These small files are usually in markdown format, so it’s really straightforward to edit them without messing things up and just focusing on the content (e.g., posts in a blog).
 
 When you run Jekyll on the terminal, it puts all the smaller files and reads the configuration file to decide which parts to include. The resulting static website is built on the `_site` folder. You should never edit any file on this folder.
 
-### Install RubyGems
+## Install RubyGems
 
 The first step to get Jekyll on your system is to install Ruby:
 
@@ -33,7 +32,7 @@ gem update
 gem update --system
 ```
 
-### Install Jekyll
+## Install Jekyll
 
 Then you can simply install Jekyll using Gem, Ruby's the package manager:
 
@@ -41,7 +40,7 @@ Then you can simply install Jekyll using Gem, Ruby's the package manager:
 gem install jekyll
 ```
 
-### Install bundle and jekyll theme dependencies
+## Install bundle and jekyll theme dependencies
 
 Most Jekyll templates come with a `Gemfile` that specifies which plugins/packages are needed. To install these automatically, you need `bundle`:
 
@@ -55,7 +54,7 @@ cd PATH
 bundle install
 ```
 
-### Set virtual environment
+## Set virtual environment
 
 To build your website and run it locally (useful for testing and making sure everything works), just run:
 ```bash
@@ -81,27 +80,3 @@ I honestly just use this last command exclusively, defined as an alias in my `.z
 alias jekyll-serve="bundle exec jekyll serve --watch"
 ```
 as it works in all scenarios.
-
-## Adobe Digital Editions (Wine)
-
-```bash
-echo "Hello world!"
-```
-
-## Age of Empires II: HD on Steam
-
-```bash
-echo "Hello world!"
-```
-
-## Civilization IV on Steam
-
-```bash
-echo "Hello world!"
-```
-
-## SketchUp 2018 (Wine)
-
-```bash
-echo "Hello world!"
-```
