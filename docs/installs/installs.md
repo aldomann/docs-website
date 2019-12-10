@@ -3,7 +3,7 @@ layout: default
 title: Installation guides
 nav_order: 3
 has_children: true
-permalink: docs/installs
+permalink: docs/installs/
 ---
 
 # Installation guides
