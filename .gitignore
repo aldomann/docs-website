@@ -1,9 +1,6 @@
-*.Rproj
-.Rproj.user
-.Rhistory
-.RData
-.Ruserdata
-_publish.R
-_book
-_bookdown_files
-rsconnect
+*.gem
+.bundle
+.sass-cache
+_site
+Gemfile.lock
+node_modules
