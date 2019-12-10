@@ -29,9 +29,9 @@
   {% endif %}
 
   {% if site.search_enabled != false %}
-    <script type="text/javascript" src="{{ '/assets/js/vendor/lunr.min.js' | absolute_url }}"></script>
+    <script type="text/javascript" src="{{ '/assets/js/vendor/lunr.min.js' | prepend: site.baseurl | replace: 'http://', 'https://' }}"></script>
   {% endif %}
-  <script type="text/javascript" src="{{ '/assets/js/just-the-docs.js' | absolute_url }}"></script>
+  <script type="text/javascript" src="{{ '/assets/js/just-the-docs.js' | prepend: site.baseurl | replace: 'http://', 'https://' }}"></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
