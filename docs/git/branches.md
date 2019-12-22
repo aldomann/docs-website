@@ -17,33 +17,78 @@ nav_order: 4
 ---
 
 ## Create local branch
+
+To create a new branch and switch to it at the same time, you can run
 ```bash
-git checkout -b <local-branch>
+git checkout -b <new-branch>
 ```
 
-## Push current local branch to remote
+This is shortcut to
 ```bash
-git push origin <remote-branch>
+git branch <new-branch>
+git checkout <new-branch>
 ```
 
-## Sync remote branch to current local
+To be able to make commits into GitHub (or whichever Git hosting service you use) you need to first push the current branch and set the remote as upstream:
 ```bash
-git pull origin <remote-branch>
+git push --set-upstream origin <new-branch>
 ```
 
-## Set permanent local-remote link
+## Add local branch from remote branch
+
+If your repository already has a remote branch that you want to work on locally, you can add it to your local repository by running
 ```bash
-git branch --set-upstream-to=origin/<remote-branch> <local-branch>
+git checkout <remote-branch>
 ```
 
+or on older verions of Git:
+```bash
+git checkout -b <remote-branch> origin/<remote-branch>
+```
+
+## Switch between branches
+
+To switch between your branches and your `master` branch, you can use the
+```bash
+git checkout <new-branch>
+```
+and
+```bash
+git checkout master
+```
+
+## Merge branches
+
+Before merging branches, make sure you are on the *receiving* branch (usually `master`) by running
+```bash
+git checkout <receiving-branch>
+```
+After that, you can merge your desired branch `<merged-branch>` to  `<receiving-branch>` by running
+```bash
+git merge <merged-branch>
+```
+
+## Delete branches
+
+### Delete local branch
+
+Once you've finished working on a branch and have merged it into the main code base, you're free to delete the branch without losing any history:
+```bash
+git branch -d <new-branch>
+```
+
+However, if the branch hasn't been merged, the above command will output an error message warning you that the branch is not fully merged.
+
+If you really want to delete the branch, you can use the `-D` flag:
+
+```bash
+git branch -D <new-branch>
+```
+This deletes the branch regardless of its status and without warnings, so use it judiciously.
 
 
-## Delete remote branch
+### Delete remote branch
+
 ```bash
 git push origin --delete <remote-branch>
-```
-
-## Delete local branch
-```bash
-git branch -D <local-branch>
 ```
